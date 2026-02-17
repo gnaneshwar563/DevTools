@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: com.nt.main.StringUtilTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.095 s <<< FAILURE! -- in com.nt.main.StringUtilTest
+com.nt.main.StringUtilTest.testNonSingleTonClass -- Time elapsed: 0.019 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: not equal but was: <2026-02-15>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNotEquals.failEqual(AssertNotEquals.java:277)
+	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:263)
+	at org.junit.jupiter.api.AssertNotEquals.assertNotEquals(AssertNotEquals.java:258)
+	at org.junit.jupiter.api.Assertions.assertNotEquals(Assertions.java:2819)
+	at com.nt.main.StringUtilTest.testNonSingleTonClass(StringUtilTest.java:144)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.nt.main.StringUtilTest.testInvalidMonth -- Time elapsed: 0.002 s <<< ERROR!
+java.time.DateTimeException: Invalid value for MonthOfYear (valid values 1 - 12): 0
+	at java.base/java.time.temporal.ValueRange.checkValidValue(ValueRange.java:319)
+	at java.base/java.time.temporal.ChronoField.checkValidValue(ChronoField.java:718)
+	at java.base/java.time.LocalDate.of(LocalDate.java:273)
+	at com.nt.main.StringUtil.createDate(StringUtil.java:20)
+	at com.nt.main.StringUtilTest.testInvalidMonth(StringUtilTest.java:96)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.nt.main.StringUtilTest.testInvalidDay -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <2000-10-20>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertNull.failNotNull(AssertNull.java:50)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:35)
+	at org.junit.jupiter.api.AssertNull.assertNull(AssertNull.java:30)
+	at org.junit.jupiter.api.Assertions.assertNull(Assertions.java:279)
+	at com.nt.main.StringUtilTest.testInvalidDay(StringUtilTest.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
